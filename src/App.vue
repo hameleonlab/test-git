@@ -3,6 +3,7 @@
   <div>
     <input type="text" 
       v-model="simpleText">
+      <button @click="clerText">Clear</button>
   </div>
   <h1>{{ simpleText }}</h1>
 </template>
@@ -14,6 +15,11 @@ export default {
   data() {
     return {
       simpleText: 'demo text'
+    }
+  },
+  methods: {
+    clerText() {
+      this.simpleText = ''
     }
   },
 }
